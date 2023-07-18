@@ -13,6 +13,8 @@
     // echo $_GET['email'] . '<br/>';
     // echo $_GET['senha'];
 
+    echo 'teste commit';
+
     print_r($_POST);
     echo '<br/> Login feito com sucesso com POST!<br/>';
     echo $_POST['email'] . '<br/>';

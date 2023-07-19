@@ -19,7 +19,11 @@
     if($usuario_autenticado){
         echo $usuario . ' autenticado!';
     }else{
-        header('Location: index.php?login=erro');
+        if(empty($_POST['email']) or empty($_POST['senha'])){
+            header('Location: index.php?login=vazio');
+        }else{
+            header('Location: index.php?login=erro');
+        }
     }
 
     // echo '<pre>';

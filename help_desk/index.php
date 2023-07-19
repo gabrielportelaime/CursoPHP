@@ -44,6 +44,11 @@
                     Usuário ou senha inválido(s)
                   </div>
                   <?php } ?>
+                  <?php if(isset($_GET['login']) and $_GET['login'] == 'vazio'){ ?>
+                  <div class="text-danger">
+                    Insira os dados de login
+                  </div>
+                  <?php } ?>
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
             </div>

@@ -1,23 +1,33 @@
 <?php
     // Usuários do sistema
     $usuarios = [
-        ['email' => 'admin@teste', 'senha' => '1234'],
-        ['email' => 'user@teste', 'senha' => 'abcd'],
+        ['email' => 'admin@teste', 'senha' => '1234', 'nome' => 'admin'],
+        ['email' => 'user@teste', 'senha' => 'abcd', 'nome' => 'user'],
     ];
 
-    echo '<pre>';
-    print_r($usuarios);
-    echo '</pre>';
+    // Variável para saber se o usuário está autenticado
+    $usuario_autenticado = false;
+
+    foreach($usuarios as $user){
+
+        if($user['email'] == $_POST['email'] and $user['senha'] == $_POST['senha']){
+            $usuario = $user['nome'];
+            $usuario_autenticado = true;
+        }
+    }
+
+    if($usuario_autenticado){
+        echo $usuario . ' autenticado!';
+    }else{
+        header('Location: index.php?login=erro');
+    }
+
+    // echo '<pre>';
+    // print_r($usuarios);
+    // echo '</pre>';
     // print_r($_GET);
     // echo '<br/> Login feito com sucesso! <br/>';
     // echo $_GET['email'] . '<br/>';
     // echo $_GET['senha'];
-
-    echo 'teste commit';
-
-    print_r($_POST);
-    echo '<br/> Login feito com sucesso com POST!<br/>';
-    echo $_POST['email'] . '<br/>';
-    echo $_POST['senha'];
 
 ?>

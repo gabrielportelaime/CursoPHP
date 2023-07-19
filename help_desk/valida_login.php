@@ -1,4 +1,5 @@
 <?php
+    session_start();
     // Usuários do sistema
     $usuarios = [
         ['email' => 'admin@teste', 'senha' => '1234', 'nome' => 'admin'],
@@ -18,7 +19,9 @@
 
     if($usuario_autenticado){
         echo $usuario . ' autenticado!';
+        $_SESSION['autenticado'] = 'SIM';
     }else{
+        $_SESSION['autenticado'] = 'NAO';
         if(empty($_POST['email']) or empty($_POST['senha'])){
             header('Location: index.php?login=vazio');
         }else{

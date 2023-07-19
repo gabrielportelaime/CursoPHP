@@ -2,9 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <title>App Help Desk</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
     <style>
       .card-login {
         padding: 30px 0 0 0;
@@ -13,19 +11,15 @@
       }
     </style>
   </head>
-
   <body>
-
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
         <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
     </nav>
-
     <div class="container">    
       <div class="row">
-
         <div class="card-login">
           <div class="card">
             <div class="card-header">
@@ -47,6 +41,11 @@
                   <?php if(isset($_GET['login']) and $_GET['login'] == 'vazio'){ ?>
                   <div class="text-danger">
                     Insira os dados de login
+                  </div>
+                  <?php } ?>
+                  <?php if(isset($_GET['login']) and $_GET['login'] == 'autenticado'){ ?>
+                  <div class="text-danger">
+                    Sessão expirada
                   </div>
                   <?php } ?>
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>

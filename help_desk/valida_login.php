@@ -20,6 +20,7 @@
     if($usuario_autenticado){
         echo $usuario . ' autenticado!';
         $_SESSION['autenticado'] = 'SIM';
+        header('Location: home.php');
     }else{
         $_SESSION['autenticado'] = 'NAO';
         if(empty($_POST['email']) or empty($_POST['senha'])){

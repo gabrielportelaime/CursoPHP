@@ -1,4 +1,5 @@
-Notebook#Hardware#Notebook não liga
-Problema impressão#Impressora#Impressora sem tinta
-Sem navegação#Rede#Não consigo acessar site algum
-Software parou#Software#O software da empresa não funciona mais
+3#Notebook#Hardware#Notebook não funciona
+4#Erro de impressão#Impressora#Não imprime
+3#Navegabilidade#Rede#Impossível acessar qualquer site
+
+1#ERRO#Rede#ERRO EROO

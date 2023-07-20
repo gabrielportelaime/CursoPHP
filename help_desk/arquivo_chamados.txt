@@ -1,0 +1,4 @@
+Notebook#Hardware#Notebook não liga
+Problema impressão#Impressora#Impressora sem tinta
+Sem navegação#Rede#Não consigo acessar site algum
+Software parou#Software#O software da empresa não funciona mais
